@@ -1,8 +1,31 @@
 [package]
-name = "NewslLetterApi"
+name = "newsletter_app"
 version = "0.1.0"
+authors = ["rexx07"]
 edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "newsletter_app"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+actix-web = "4.2.1"
+tokio = {version = "1.22.0", features = ["macros", "rt-multi-thread"]}
+reqwest = "0.11.13"
+serde = {version = "1.0.147", features = ["derive"]}
+[dependencies.sqlx]
+version = "0.5.7"
+default-features = false
+features = [
+    "runtime-actix-rustls",
+    "macros",
+    "postgres",
+    "uuid",
+    "chrono",
+    "migrate"
+]
