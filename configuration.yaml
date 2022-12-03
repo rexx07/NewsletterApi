@@ -1,8 +1,9 @@
 # configuration.yaml
 application_port: 8000
+
 database:
   host: "127.0.0.1"
   port: 5432
-  username: "testeradmin"
-  password: "testing"
+  username: "postgres"
+  password: "ologuneru"
   database_name: "newsletterdb"
